@@ -65,8 +65,8 @@ class LoginController extends Controller
     public function createUserByGoogle($google_user)
     {
         $user = User::create([
-            'name'     => $google_user->name,
-            'email'    => $google_user->email,
+            'name'  => $google_user->name,
+            'email' => $google_user->email,
         ]);
         return $user;
     }
