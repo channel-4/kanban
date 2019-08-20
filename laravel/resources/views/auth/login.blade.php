@@ -8,11 +8,9 @@
                 <div class="panel-heading">ログイン ※Googleアカウントが必要になります</div>
 
                 <div class="panel-body">
-                    <div class="col-md-4 col-md-offset-3">
-                        <a href="/login/google" class="btn btn-primary btn-lg" role="button">
-                            <i class="fa fa-google"></i> | Googleアカウントでログイン
-                        </a>
-                    </div>
+                    <a href="/login/google" class="btn btn-primary btn-lg btn-block" role="button">
+                        <i class="fa fa-google"></i> | Googleアカウントでログイン
+                    </a>
                 </div>
             </div>
         </div>
