@@ -1,0 +1,24 @@
+body {
+  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  background: #fff;
+}
+/* navbar */.navbar-inverse {
+  border-bottom: 4px solid #ddd;
+}
+.navbar-inverse .navbar-brand {
+  color: #eee;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #eee;
+}
+/* バリデーション用 */.warning-list {
+  padding: 15px 15px 5px;
+}
+/* kanban */.all-kanban {
+  padding: 25px 15px 5px;
+  background: #070;
+  border-radius: 5px;
+}
+.each-kanban {
+  border: 1px solid #eee;
+}

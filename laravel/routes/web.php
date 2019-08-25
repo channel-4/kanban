@@ -16,8 +16,8 @@ Route::namespace('Lists')->group(function() {
     // 一覧
     Route::get('/', 'ListsController@index'); 
     // 新規追加
-    Route::get('/lists/new', 'ListsController@new');
-    Route::post('/lists/new', 'ListsController@store');
+    Route::get('/list/new', 'ListsController@new');
+    Route::post('/list/new', 'ListsController@store');
     // 更新
     Route::get('/list/edit/{list_id}', 'ListController@edit');
     Route::post('/list/edit/{list_id}', 'ListController@update');
@@ -29,8 +29,8 @@ Route::namespace('Lists')->group(function() {
 // TODO リストが完成したら作成する
 
 // 認証関連
-Auth::routes();
+Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+
 Route::get('/login/google', 'Auth\LoginController@redirectToGoogle');
 Route::get('/login/callback', 'Auth\LoginController@handleGoogleCallback');
-
-Route::get('/home', 'HomeController@index')->name('home');
