@@ -19,10 +19,10 @@ Route::namespace('Lists')->group(function() {
     Route::get('/list/new', 'ListsController@new');
     Route::post('/list/new', 'ListsController@store');
     // 更新
-    Route::get('/list/edit/{list_id}', 'ListController@edit');
-    Route::post('/list/edit/{list_id}', 'ListController@update');
+    Route::get('/list/edit/{list_id}', 'ListsController@edit');
+    Route::post('/list/edit/{list_id}', 'ListsController@update');
     // 削除
-    Route::post('/list/delete/{list_id}', 'ListingsController@destroy');
+    Route::post('/list/delete/{list_id}', 'ListsController@destroy');
 });
 
 /* カード関連 */

@@ -37,7 +37,7 @@ class ListsController extends Controller
                  ->orderBy('created_at', 'asc')
                  ->get();
         
-        return view('lists/index', ['lists' => $lists]);
+        return view('list/index', ['lists' => $lists]);
     }
     
     /**
@@ -45,7 +45,7 @@ class ListsController extends Controller
      */
     public function new()
     {
-        return view('lists/new');
+        return view('list/new');
     }
     
     /**
@@ -60,6 +60,30 @@ class ListsController extends Controller
 
         $list->save();
         
-        return redirect('/');
+        return redirect('/')->with('flash_message', 'リストを追加しました');
+    }
+    
+    /**
+     * 更新画面表示
+     */
+    public function edit(int $list_id)
+    {
+        $list = Listing::find($list_id);
+        return view('list/edit', ['list' => $list]);
+    }
+    
+    public function update(StoreListPost $request, int $list_id)
+    {
+        $list = Listing::find($list_id);
+        $list->title = $request->title;
+        $list->save();
+        return redirect('/')->with('flash_message', 'リスト名を変更しました');
+    }
+    
+    public function destroy(int $list_id)
+    {
+        $list = Listing::find($list_id);
+        $list->delete();
+        return redirect('/')->with('flash_message', 'リストの削除が完了しました');
     }
 }

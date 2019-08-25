@@ -25,4 +25,18 @@ body {
 }
 .each-kanban {
     border: 1px solid #EEE;
+    .panel-heading {
+        font-size: 16px;
+    }
+    .link-area {
+        float: right;
+        a {
+            color: #ddd;
+            margin-left: 3px;
+            &:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
 }

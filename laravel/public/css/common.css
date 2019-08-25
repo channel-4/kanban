@@ -22,3 +22,17 @@ body {
 .each-kanban {
   border: 1px solid #eee;
 }
+.each-kanban .panel-heading {
+  font-size: 16px;
+}
+.each-kanban .link-area {
+  float: right;
+}
+.each-kanban .link-area a {
+  color: #ddd;
+  margin-left: 3px;
+}
+.each-kanban .link-area a:hover {
+  color: #fff;
+  text-decoration: none;
+}
