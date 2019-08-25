@@ -49,7 +49,7 @@ class CardsController extends Controller
         ]);
     }
     
-    public function update(int $card_id, StoreCardPost $request)
+    public function update(int $list_id, int $card_id, StoreCardPost $request)
     {
         // 現状list_idは使わない
         // TODO カードを別のリストに移動させる機能実装時に使用
@@ -57,8 +57,17 @@ class CardsController extends Controller
         
         $card->title = $request->title;
         $card->memo  = $request->memo;
+
         $card->save();
         
         return redirect('/')->with('flash_message', 'カードを編集しました');
+    }
+    
+    public function destroy(int $card_id)
+    {
+        $card = Card::find($card_id);
+        $card->delete();
+        
+        return redirect('/')->with('flash_message', 'カードを削除しました');
     }
 }

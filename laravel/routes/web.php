@@ -33,6 +33,8 @@ Route::namespace('Cards')->group(function() {
     // 更新
     Route::get('/list/{list_id}/card/edit/{card_id}', 'CardsController@edit');
     Route::post('/list/{list_id}/card/edit/{card_id}', 'CardsController@update');
+    // 削除
+    Route::post('/card/delete/{card_id}', 'CardsController@destroy');
 });
 
 // 認証関連

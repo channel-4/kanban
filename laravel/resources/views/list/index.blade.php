@@ -14,11 +14,11 @@
                         </a>
                         <a href="/list/delete/{{ $list->id }}"
                             onclick="event.preventDefault();
-                                     document.getElementById('destroy-form').submit();">
+                                     document.getElementById('list{{ $list->id }}-destroy-form').submit();">
                             <i class="fa fa-trash"></i>
                         </a>
 
-                        <form id="destroy-form" action="/list/delete/{{ $list->id }}" method="post" style="display: none;">
+                        <form id="list{{ $list->id }}-destroy-form" action="/list/delete/{{ $list->id }}" method="post" style="display: none;">
                             {{ csrf_field() }}
                         </form>
                     </div>
@@ -39,6 +39,14 @@
                             <a class="btn btn-default btn-xs card-edit" href="list/{{ $list->id }}/card/edit/{{ $card->id }}">
                                 <i class="fa fa-edit"></i> 編集
                             </a>
+                            
+                            <a href="/card/delete/{{ $card->id }}" class="btn btn-default btn-xs card-edit"
+                               onclick="event.preventDefault(); document.getElementById('card{{ $card->id }}-destroy-form').submit();">
+                                <i class="fa fa-trash"></i> 削除
+                            </a>
+                            <form id="card{{ $card->id }}-destroy-form" action="/card/delete/{{ $card->id }}" method="post" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
                         </div>
                     </div>
                     @endforeach
