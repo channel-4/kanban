@@ -36,3 +36,6 @@ body {
   color: #fff;
   text-decoration: none;
 }
+.each-kanban .all-card .add-card {
+  margin-bottom: 10px;
+}

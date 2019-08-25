@@ -36,7 +36,7 @@ class ListsController extends Controller
         $lists = Listing::where('user_id', Auth::user()->id)
                  ->orderBy('created_at', 'asc')
                  ->get();
-        
+
         return view('list/index', ['lists' => $lists]);
     }
     

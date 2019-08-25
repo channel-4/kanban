@@ -26,7 +26,11 @@ Route::namespace('Lists')->group(function() {
 });
 
 /* カード関連 */
-// TODO リストが完成したら作成する
+Route::namespace('Cards')->group(function() {
+    // 新規追加
+    Route::get('/list/{list_id}/card/new', 'CardsController@new');
+    Route::post('/list/{list_id}/card/new', 'CardsController@store');
+});
 
 // 認証関連
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');

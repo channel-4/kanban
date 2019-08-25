@@ -23,8 +23,22 @@
                         </form>
                     </div>
                 </div>
-                <div class="panel-body">
-                    {{-- TODO ここに各タスクが入る --}}
+                <div class="panel-body all-card">
+                    <div class="add-card">
+                        <a class="btn btn-default btn-sm" href="/list/{{ $list->id }}/card/new" role="button">
+                            <i class="fa fa-plus-square"></i> カードを追加
+                        </a>
+                    </div>
+                    @foreach ($list->cards as $card)
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            {{ $card->title }}
+                        </div>
+                        <div class="panel-body">
+                        {{ $card->memo }}
+                    </div>
+                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

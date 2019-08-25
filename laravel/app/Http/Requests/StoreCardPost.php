@@ -4,10 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-/**
- * リスト作成, 更新用のバリデーション
- */
-class StoreListPost extends FormRequest
+class StoreCardPost extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,6 +25,7 @@ class StoreListPost extends FormRequest
     {
         return [
             'title' => 'required|max:20',
+            'memo'  => 'required|max:255'
         ];
     }
     
@@ -39,8 +37,10 @@ class StoreListPost extends FormRequest
     public function messages()
     {
         return [
-            'title.required' => '入力して送信してください',
+            'title.required' => 'タイトルを入力してください',
             'title.max'      => 'タイトルは最大20文字までです',
+            'memo.required'  => 'メモを入力してください',
+            'title.max'      => 'メモは最大255文字までです',
         ];
     }
 }

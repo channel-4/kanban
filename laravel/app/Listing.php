@@ -11,5 +11,10 @@ class Listing extends Model
      *
      * @var string
      */
-     protected $table = 'lists';
+    protected $table = 'lists';
+     
+    public function cards()
+    {
+        return $this->hasMany('App\Card', 'list_id');
+    }
 }
