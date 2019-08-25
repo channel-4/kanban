@@ -30,6 +30,9 @@ Route::namespace('Cards')->group(function() {
     // 新規追加
     Route::get('/list/{list_id}/card/new', 'CardsController@new');
     Route::post('/list/{list_id}/card/new', 'CardsController@store');
+    // 更新
+    Route::get('/list/{list_id}/card/edit/{card_id}', 'CardsController@edit');
+    Route::post('/list/{list_id}/card/edit/{card_id}', 'CardsController@update');
 });
 
 // 認証関連

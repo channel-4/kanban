@@ -4,7 +4,7 @@
 @include('common.flash')
 <div class="container all-kanban">
     @foreach ($lists as $list)
-        <div class="col-sm-6 col-md-3">
+        <div class="col-sm-6 col-md-4">
             <div class="panel panel-primary each-kanban">
                 <div class="panel-heading">
                     {{ $list->title }}
@@ -31,12 +31,15 @@
                     </div>
                     @foreach ($list->cards as $card)
                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                            {{ $card->title }}
+                        <div class="panel-heading card-title collapsed" data-toggle="collapse" data-target="#card{{$card->id}}">
+                            {{ $card->title }}<i class="fa fa-bars pull-right"></i>
                         </div>
-                        <div class="panel-body">
-                        {{ $card->memo }}
-                    </div>
+                        <div class="panel-body panel-collapse collapse card-memo" id="card{{ $card->id }}">
+                            {{ $card->memo }}<br>
+                            <a class="btn btn-default btn-xs card-edit" href="list/{{ $list->id }}/card/edit/{{ $card->id }}">
+                                <i class="fa fa-edit"></i> 編集
+                            </a>
+                        </div>
                     </div>
                     @endforeach
                 </div>

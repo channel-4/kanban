@@ -40,7 +40,7 @@ class StoreCardPost extends FormRequest
             'title.required' => 'タイトルを入力してください',
             'title.max'      => 'タイトルは最大20文字までです',
             'memo.required'  => 'メモを入力してください',
-            'title.max'      => 'メモは最大255文字までです',
+            'memo.max'      => 'メモは最大255文字までです',
         ];
     }
 }

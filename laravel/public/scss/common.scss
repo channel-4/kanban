@@ -44,4 +44,26 @@ body {
             margin-bottom: 10px;
         }
     }
+    .card-title {
+        color: #000;
+        background: #eee;
+        .fa-bars {
+            padding: 6px 0;
+            font-size: 14px;
+        }
+        &:hover {
+            opacity: 0.7;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        &.collapsed {
+            background: #ddd;
+        }
+    }
+    .card-memo {
+        color: #000;
+        .card-edit {
+            margin-top: 5px;
+        }
+    }
 }

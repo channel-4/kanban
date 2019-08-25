@@ -19,11 +19,10 @@ class CardsController extends Controller
     
     public function new(int $list_id)
     {
-        $list_title = Listing::find($list_id)->value('title');
-        
+        $list_title = Listing::find($list_id);
         return view('card/new', [
             'list_id' => $list_id,
-            'list_title' => $list_title
+            'list_title' => $list_title->title
         ]);
     }
     
@@ -36,5 +35,30 @@ class CardsController extends Controller
         
         $card->save();
         return redirect('/')->with('カードを追加しました');
+    }
+    
+    public function edit(int $list_id, int $card_id)
+    {
+        $list_title = Listing::find($list_id);
+        $card = Card::find($card_id);
+        
+        return view('card.edit', [
+            'list_id' => $list_id,
+            'list_title' => $list_title->title,
+            'card' => $card
+        ]);
+    }
+    
+    public function update(int $card_id, StoreCardPost $request)
+    {
+        // 現状list_idは使わない
+        // TODO カードを別のリストに移動させる機能実装時に使用
+        $card = Card::find($card_id);
+        
+        $card->title = $request->title;
+        $card->memo  = $request->memo;
+        $card->save();
+        
+        return redirect('/')->with('flash_message', 'カードを編集しました');
     }
 }

@@ -39,3 +39,25 @@ body {
 .each-kanban .all-card .add-card {
   margin-bottom: 10px;
 }
+.each-kanban .card-title {
+  color: #000;
+  background: #eee;
+}
+.each-kanban .card-title .fa-bars {
+  padding: 6px 0;
+  font-size: 14px;
+}
+.each-kanban .card-title:hover {
+  opacity: 0.7;
+  text-decoration: none;
+  cursor: pointer;
+}
+.each-kanban .card-title.collapsed {
+  background: #ddd;
+}
+.each-kanban .card-memo {
+  color: #000;
+}
+.each-kanban .card-memo .card-edit {
+  margin-top: 5px;
+}
