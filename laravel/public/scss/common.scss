@@ -22,6 +22,17 @@ body {
     padding: 25px 15px 5px;
     background: #070;
     border-radius: 5px;
+    /* inline-blockの微妙なズレをなくす */
+    font-size: 0;
+    
+    @media (min-width: 768px) {
+        .col-inline-box {
+        /* 高さを揃えるように横並びにするため */
+        display: inline-block;
+        float: none;
+        vertical-align: top; 
+    }
+    }
 }
 .each-kanban {
     border: 1px solid #EEE;

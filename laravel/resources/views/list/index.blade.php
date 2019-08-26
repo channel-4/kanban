@@ -4,7 +4,7 @@
 @include('common.flash')
 <div class="container all-kanban">
     @foreach ($lists as $list)
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-4 col-inline-box" style="clear: both;">
             <div class="panel panel-primary each-kanban">
                 <div class="panel-heading">
                     {{ $list->title }}
