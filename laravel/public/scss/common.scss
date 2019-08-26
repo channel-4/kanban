@@ -25,22 +25,27 @@ body {
     /* inline-blockの微妙なズレをなくす */
     font-size: 0;
     
+    .list-title {
+        max-width: 280px;
+    }
     @media (min-width: 768px) {
         .col-inline-box {
         /* 高さを揃えるように横並びにするため */
-        display: inline-block;
-        float: none;
-        vertical-align: top; 
-    }
+            display: inline-block;
+            float: none;
+            vertical-align: top;
+        }
     }
 }
 .each-kanban {
     border: 1px solid #EEE;
     .panel-heading {
         font-size: 16px;
+        
     }
     .link-area {
         float: right;
+        margin-top: -25px;
         a {
             color: #ddd;
             margin-left: 3px;
@@ -73,6 +78,7 @@ body {
     }
     .card-memo {
         color: #000;
+        font-size: 14px;
         .card-edit {
             margin-top: 5px;
         }

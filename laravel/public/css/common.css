@@ -21,6 +21,9 @@ body {
   /* inline-blockの微妙なズレをなくす */
   font-size: 0;
 }
+.all-kanban .list-title {
+  max-width: 280px;
+}
 @media (min-width: 768px) {
   .all-kanban {
     /* 高さを揃えるように横並びにするため */
@@ -39,6 +42,7 @@ body {
 }
 .each-kanban .link-area {
   float: right;
+  margin-top: -25px;
 }
 .each-kanban .link-area a {
   color: #ddd;
@@ -69,6 +73,7 @@ body {
 }
 .each-kanban .card-memo {
   color: #000;
+  font-size: 14px;
 }
 .each-kanban .card-memo .card-edit {
   margin-top: 5px;

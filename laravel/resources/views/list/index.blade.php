@@ -7,7 +7,7 @@
         <div class="col-sm-6 col-md-4 col-inline-box" style="clear: both;">
             <div class="panel panel-primary each-kanban">
                 <div class="panel-heading">
-                    {{ $list->title }}
+                    <div class="list-title">{{ $list->title }}</div>
                     <div class="link-area">
                         <a href="/list/edit/{{ $list->id }}">
                             <i class="fa fa-edit"></i>
