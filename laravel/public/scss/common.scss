@@ -1,6 +1,9 @@
 body {
     font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     background: #fff;
+    @media (max-width: 767px) {
+        background: #070;
+    }
 }
 
 /* navbar */
@@ -24,7 +27,14 @@ body {
     border-radius: 5px;
     /* inline-blockの微妙なズレをなくす */
     font-size: 0;
+    @media (max-width: 767px) {
+        border-radius: 0px;
+    }
     
+    .lint-add-info {
+        font-size: 14px;
+        line-height: 2.0;
+    }
     .list-title {
         max-width: 280px;
     }

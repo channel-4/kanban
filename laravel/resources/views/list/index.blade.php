@@ -3,6 +3,18 @@
 @section('content')
 @include('common.flash')
 <div class="container all-kanban">
+    @if (count($lists) == 0)
+      <div class="col-sm-6 col-md-5">
+          <div class="panel panel-default">
+              <div class="panel-heading lint-add-info">
+                    リストが登録されていません
+                    <a href="/list/new" class="btn btn-default btn-sm pull-right" role="button">
+                        <i class="fa fa-plus-square"></i> 追加はこちら
+                    </a>
+              </div>
+          </div>
+      </div>
+    @endif
     @foreach ($lists as $list)
         <div class="col-sm-6 col-md-4 col-inline-box" style="clear: both;">
             <div class="panel panel-primary each-kanban">

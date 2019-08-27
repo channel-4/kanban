@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ secure_asset('css/common.css') }}" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
 </head>
@@ -82,6 +82,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ secure_asset('js/app.js') }}"></script>
 </body>
 </html>
